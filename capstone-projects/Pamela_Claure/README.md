@@ -1,5 +1,5 @@
 # Understanding Precipitation Partitioning and Hydrologic Impacts in Mountainous Catchments
-This repository contains data and scripts necessary for reproducing the xx model.
+This repository contains data and scripts necessary for reproducing the Mill Creek catchment model.
 
 ## Summary
 In the mountainous western United States, snowmelt is the primary source of downstream water supply, but a warming climate threatens the timing and quantity of future water resources. 
@@ -12,11 +12,10 @@ Expected outcomes include an improved understanding of how changing precipitatio
 contributing to predictive models for the Great Salt Lake basin and supporting sustainable water management strategies for stakeholders in the region.
 
 ## Methods
-- Modeling tool
-State what modeling code you will be using
+- This is the aplication of the Amanzi-ATS model with the Watershed Workflow
 
-- Study Area
-State what real or hypothetical study area you will be working on 
+- The study area is the Mill Creek catchment in the Jordan River from the Great Salt Lake basin
+
 
 ## Repository Structure
 ```
@@ -28,10 +27,8 @@ State what real or hypothetical study area you will be working on
 `-- results
 |   |-- figures
 ```
-- `data`: provides data needed to run the model (e.g., meshes, meterological forcing, observation, etc.)
-- `model`: provides input files and essential model outputs (e.g., observation points, mass balance)
-- `scripts`: provides the scripts or jupyter notebooks for pre- and post- processing model files
-- `results`: provides any results generated from the model analysis (e.g., figures associated with report)
-
-## Citation
-Provide any citation for the model or data (if it is stored somewhere else).
+- `data`: provides data needed to run the model (includes the main inputs to run the watershed workflow)
+- `model`: provides input files  for the Amanzi-ATS model. The input daymet data is stored in forlders Scenario 1 (partition threshold 0 °C), Scenario 2 (partition threshold +2 °C) and Scenario 3 (partition threshold -2°C).
+			To run the model please change include the files in the Sneraio folder into the processed folder.
+			Aditionally in the output folder a comparison of the water balance for the three scenarios is incorporated.
+- `scripts - results`: provides the jupyter notebooks for pre - processing model files to prepare the input for ATS and the post processing includes the results analysys and the graphs generated as part of the analysis. 
